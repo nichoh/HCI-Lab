@@ -17,9 +17,9 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 50%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
  /* .nav-link-container{
@@ -59,12 +59,50 @@ body{
  .content{
    display: flex;
    flex-direction: column;
+   background-color: #FAFAFA;
  }
 
  /* Mac Page */
  .macbookType-Container{
    display: flex;
    justify-content: center;
+   margin-top: 20px;
  }
+
+ .type-content{ 
+   display: none;
+ }
+
+ .type-content--active{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .type-button{
+   font-size: 20px;
+   color: black;
+   margin: 0px 10px;
+   border: none;
+ }
+
+ .type-button--active{
+   font-size: 20px;
+   color: black;
+   margin: 0px 10px;
+   border-bottom: 2px solid black;
+ }
+
+ .comparison-container{
+   display: flex;
+   justify-content: center;
+ }
+
+ .comp-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+
 
  

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Store</title>
     <link rel="stylesheet" href="style.css">
-    <script></script>
 </head>
 <body>
     <header>
@@ -25,20 +24,96 @@
 
     <div class="content">
         <div class="macbookType-Container">
-            <button class="type-button" data-macbooktype="comparison">Comparison</button>
-            <button class="type-button" data-macbooktype="AirM1">MacBook Air M1</button>
-            <button class="type-button" data-macbooktype="AirM2">MacBook Air M2</button>
-            <button class="type-button" data-macbooktype="Pro13"> MacBook Pro 13"</button>
-            <button class="type-button" data-macbooktype="Pro16"> MacBook Pro 16"</button>
+            <button class="type-button" data-for-tab="1">Comparison</button>
+            <button class="type-button" data-for-tab="2">MacBook Air M1</button>
+            <button class="type-button" data-for-tab="3">MacBook Air M2</button>
+            <button class="type-button" data-for-tab="4">MacBook Pro 13"</button>
+            <button class="type-button" data-for-tab="5">MacBook Pro 14" and 16"</button>
+            
+            <!-- <a class="type-button" data-for-macbooktype="comparison" href="">Comparison</a>
+            <a class="type-button" data-for-macbooktype="AirM1" href="">MacBook Air M1</a>
+            <a class="type-button" data-for-macbooktype="AirM2" href="">MacBook Air M2</a>
+            <a class="type-button" data-for-macbooktype="Pro13" href="">MacBook Pro 13"</a>
+            <a class="type-button" data-for-macbooktype="Pro16" href="">MacBook Pro 14" and 16"</a> -->
+            
         </div>
 
-        <div class="type-content" data-typeContent="comparison">
-            <div class="comparison-content">
+        <div class="type-content" data-tab="1">
+            <div class="comparison-container">
+                <div class="comp-content">
+                    <img src="Asset/Air M1.png" alt="">
+                </div>
+                <div class="comp-content">
+                    <img src="Asset/Macbook Pro 13.png" alt="">
+                </div>
+                <div class="comp-content">
+                    <img src="Asset/Macbook Pro 16.png" alt="" >
+                </div>
+            </div>
+        </div>
 
+        <div class="type-content" data-tab="2">
+            <div class="comparison-container">
+                <div class="comp-content">
+                    <img src="Asset/Air M1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="type-content" data-tab="4">
+            <div class="comparison-container">
+                <div class="comp-content">
+                    <img src="Asset/Macbook Pro 13.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="type-content" data-tab="5">
+            <div class="comparison-container">
+                <div class="comp-content">
+                    <img src="Asset/Macbook Pro 16.png" alt="" >
+                </div>
             </div>
         </div>
 
     </div>
 </body>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script>
+    function setupTabs(){
+        document.querySelectorAll(".type-button").forEach(button =>{
+            button.addEventListener("click", () =>{
+                const typeBar = button.parentElement;
+                const barContainer = typeBar.parentElement;
+                const typeNumber = button.dataset.forTab;
+                const typeToActivate = barContainer.querySelector(`.type-content[data-tab="${typeNumber}"]`);
+
+                typeBar.querySelectorAll(".type-button").forEach(button => {
+                    button.classList.remove("type-button--active");
+                });
+
+                barContainer.querySelectorAll(".type-content").forEach(tab => {
+                    tab.classList.remove("type-content--active");
+                });
+                
+                button.classList.add("type-button--active");
+                typeToActivate.classList.add("type-content--active");
+
+                console.log(typeBar)
+                console.log(barContainer)
+                console.log(typeNumber)
+                console.log(typeToActivate)
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setupTabs();
+
+        document.querySelectorAll('.tabs').forEach(barContainer=>{
+            barContainer.querySelector('.macbookType-Container .type-button').click();
+        });
+    });
+</script>
+
 </html>
