@@ -17,10 +17,6 @@ function setupTabs(){
             button.classList.add("type-button--active");
             typeToActivate.classList.add("type-content--active");
 
-            console.log(typeBar)
-            console.log(barContainer)
-            console.log(typeNumber)
-            console.log(typeToActivate)
         });
     });
 }
@@ -28,7 +24,7 @@ function setupTabs(){
 document.addEventListener("DOMContentLoaded", () => {
     setupTabs();
 
-    document.querySelectorAll('.tabs').forEach(barContainer=>{
-        barContainer.querySelector('.macbookType-Container .type-button').click();
-    });
+    document.querySelectorAll(".content").forEach(barContainer =>{
+        barContainer.querySelector(".macbookType-Container .type-button").click();
+    })
 });

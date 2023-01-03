@@ -1,3 +1,8 @@
+html{
+  font-size: 62.5%;
+}
+
+/* Homepage */
 body{
     display: flex;
     flex-direction: column;
@@ -18,42 +23,32 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding-top: 5px;
     width: 50%;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
- /* .nav-link-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    font-size: 30px;
- } */
+.nav-icon{
+  height: 36px;
+}
+
+.woople-logo{
+  height: 36px;
+}
 
  a{
     color: white;
+
  }
-
-
- /* .logo-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
- }
-
- .icon-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 15%;
- } */
 
  .content-container{
     display: flex;
     flex-direction: row;
+    padding-top: 10px;
+    padding-left: 10px;
+    justify-content: space-evenly;
+    min-height: 1000px;
+    margin: 10px 0px;
  }
 
  .content{
@@ -61,6 +56,57 @@ body{
    flex-direction: column;
    background-color: #FAFAFA;
  }
+
+ .Product-display{
+  display: flex;
+  flex-direction: column;
+  min-height: 1000px;
+  width: 48%;
+  text-align: center;
+ }
+
+ #iphone-display{
+  background-color: #d1d1d1;
+ }
+
+ .iphoneThumbnail{
+  max-width: 90%
+ }
+
+ .macThumbnail{
+  max-width: 90%
+ }
+
+ #mac-display{
+  background-image: radial-gradient(#591E4C 1%,#070707 99%);
+  color: white;
+ }
+
+ .Title{
+  height: 20%;
+ }
+
+ .Thumbnail-container{
+  display: flex;
+  height: 60%;
+ }
+ 
+ #phone{
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+ }
+
+ #mac{
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+ }
+
+ .info-container{
+  height: 20%;
+ }
+
 
  /* Mac Page */
  .macbookType-Container{
@@ -105,4 +151,55 @@ body{
 
 
 
- 
+ /* Responsive */
+ @media only screen and (max-width: 768px){
+  .content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    margin: 10px 0px;
+ }
+
+ #iphone-display{
+  min-height: 50%;
+  min-width: 90%;
+ }
+
+ #mac-display{
+  min-height: 50%;
+  min-width: 90%;
+ }
+
+ .iphoneThumbnail{
+  max-width: 70%;
+ }
+
+ }
+
+ @media only screen and (max-width: 800px){
+  .nav-container{
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  .nav-icon{
+    height: 20px;
+    width: 20px;
+  }
+
+  .woople-logo{
+    height: 26px;
+  }
+ }
+
+ /* Testing */
+ li{
+  display: inline;
+ }
+
+ ul{
+  display: flex;
+  justify-content: space-between;
+ }
