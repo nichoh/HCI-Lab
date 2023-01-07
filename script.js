@@ -1,3 +1,8 @@
+const hambMenu = document.getElementsByClassName('hamb-menu')[0]
+const navLinks = document.getElementsByClassName('link-container')[0]
+const navCheckout = document.getElementsByClassName('icon-container')[0]
+const navSearch = document.getElementsByClassName('icon-container')[1]
+
 function setupTabs(){
     document.querySelectorAll(".type-button").forEach(button =>{
         button.addEventListener("click", () =>{
@@ -28,3 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         barContainer.querySelector(".macbookType-Container .type-button").click();
     })
 });
+
+hambMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+    navCheckout.classList.toggle('active')
+    navSearch.classList.toggle('active')
+  })

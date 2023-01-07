@@ -12,12 +12,23 @@
         <div class="nav">
             <div class="nav-container">
                 <div> <img class="woople-logo" src="Asset/WOpple.png" alt=""></div>
-                <div> <a href="">Home</a></div>
-                <div> <a href="Mac.html">Mac</a></div>
-                <div> <a href="">Iphone</a></div>
-                <div> <a href="">Services</a></div>
-                <div> <img class="nav-icon" src="Asset/Search-Icon.png" alt=""></div>
-                <div> <img class="nav-icon" src="Asset/CheckOut.png" alt=""></div>
+                <div  class="link-container">
+                    <div> <a class="nav-link" href="HomePage.html">Home</a></div>
+                    <div> <a class="nav-link" href="Mac.html">Mac</a></div>
+                    <div> <a class="nav-link" href="">Iphone</a></div>
+                    <div> <a class="nav-link" href="">Services</a></div>
+                </div>
+                
+                <div class="icon-container"> <img class="nav-icon" src="Asset/CheckOut.png" alt=""></div>
+                <div class="icon-container"> <img class="nav-icon" src="Asset/Search-Icon.png" alt=""></div>
+
+                <div>
+                    <a href="#" class="hamb-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -25,22 +36,36 @@
     <div class="content-container">
         <div class="Product-display" id="iphone-display">
             <div class="Title">
-                <h1>iPhone Series</h1>
+                <h1 class="Product-Title">iPhone Series</h1>
+                <a href="">Learn more ></a>
             </div>
-            <div class="info-container"></div>
+            <div class="info-container">
+                <h1 class="Product-Name">iPhone 14</h1>
+                <h1 class="Product-Price">Rp 15.499.999</h1>
+            </div>
             <div class="Thumbnail-container" id="phone">
                 <img class="iphoneThumbnail" src="Asset/Iphone-HomePage.png" alt="">
             </div>
         </div>
         <div class="Product-display" id="mac-display">
             <div class="Title">
-                <h1>Macbook Series</h1>
+                <h1 class="Product-Title">Macbook Series</h1>
+                <a href="">Learn more ></a>
             </div>
             <div class="Thumbnail-container" id="mac">
                 <img class="macThumbnail" src="Asset/M2-HomePage.png" alt="">
             </div>
-            <div class="info-container"></div>
+            <div class="info-container" id="mac-info">
+                <h1 class="Product-Name">Macbook Pro 13"</h1>
+                <h1 class="Product-Price">Rp 20.999.999</h1>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <h1>Copyright @2022 All Rights reserved</h1>
+    </footer>
+
 </body>
+<script src="script.js"></script>
 </html>

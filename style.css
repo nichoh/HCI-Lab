@@ -2,14 +2,13 @@ html{
   font-size: 62.5%;
 }
 
-/* Homepage */
-body{
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    height: 100%;
+@font-face {
+  font-family: niagara;
+  src: url(Fonts/NIAGSOL.TTF);
+  font-size: 100%;
 }
 
+/* Nav */
 .nav{
     background-color: #292929;
     display: flex;
@@ -24,8 +23,17 @@ body{
     align-items: center;
     justify-content: space-around;
     padding-top: 5px;
-    width: 50%;
-    font-size: 2rem;
+    width: 70%;
+    font-size: 3rem;
+    font-family: niagara;
+}
+
+.link-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
 }
 
 .nav-icon{
@@ -33,44 +41,87 @@ body{
 }
 
 .woople-logo{
-  height: 36px;
+  height: 4.5rem;
 }
 
- a{
-    color: white;
+.nav-link{
+  font-size: 3.5rem;
+}
 
- }
+.hamb-menu{
+  display: none;
+}
 
- .content-container{
+.hamb-menu .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+}
+
+/* Homepage */
+body{
     display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-    padding-left: 10px;
-    justify-content: space-evenly;
-    min-height: 1000px;
-    margin: 10px 0px;
- }
+    flex-direction: column;
+    margin: 0px;
+    height: 100%;
+}
 
- .content{
-   display: flex;
-   flex-direction: column;
-   background-color: #FAFAFA;
- }
+a{
+  color: white;
+  font-size: 4rem;
+}
 
- .Product-display{
+.content-container{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  justify-content: space-evenly;
+  min-height: 900px;
+  margin: 10px 0px;
+  font-family: niagara;
+  font-style: normal;
+}
+
+.content{
   display: flex;
   flex-direction: column;
-  min-height: 1000px;
-  width: 48%;
-  text-align: center;
+  background-color: #FAFAFA;
+}
+
+.Product-display{
+ display: flex;
+ flex-direction: column;
+ min-height: 900px;
+ width: 48%;
+ text-align: center;
+}
+
+ .Product-Title{
+  font-size: 10rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+ }
+
+ .Product-Price{
+  font-size: 8rem;
+  margin: 0px 0px;
+ }
+
+ .Product-Name{
+  font-size: 11rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
  }
 
  #iphone-display{
   background-color: #d1d1d1;
+  color: black;
  }
 
  .iphoneThumbnail{
-  max-width: 90%
+  min-width: 50%;
  }
 
  .macThumbnail{
@@ -83,7 +134,7 @@ body{
  }
 
  .Title{
-  height: 20%;
+  height: 15%;
  }
 
  .Thumbnail-container{
@@ -98,15 +149,30 @@ body{
  }
 
  #mac{
+  height: 50%;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
  }
 
  .info-container{
-  height: 20%;
+  height: 25%;
  }
 
+ #phone-info{
+  height: 30%;
+ }
+
+ #mac-info{
+  height: 30%;
+ }
+
+ footer{
+  background-color: #5a5a5a;
+  color: white;
+  padding-left: 20px;
+  font-size: 1.3rem;
+ }
 
  /* Mac Page */
  .macbookType-Container{
@@ -121,7 +187,10 @@ body{
 
  .type-content--active{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   justify-content: center;
+   min-height: 1000px;
+   align-items: flex-start;
  }
 
  .type-button{
@@ -141,18 +210,25 @@ body{
  .comparison-container{
    display: flex;
    justify-content: center;
+   max-width: 90%;
+   min-height: 100%;
  }
 
  .comp-content{
    display: flex;
    flex-direction: column;
    justify-content: center;
+   min-width: 30%;
+   min-height: 1000px;
  }
 
-
+ .Detail{
+  text-align: center;
+  min-height: 9%;
+ }
 
  /* Responsive */
- @media only screen and (max-width: 768px){
+ @media only screen and (max-width: 800px){
   .content-container{
     display: flex;
     flex-direction: column;
@@ -176,30 +252,61 @@ body{
   max-width: 70%;
  }
 
+ .nav-container{
+  width: 80%;
+}
+
+.nav-link{
+  font-size: 3rem;
+}
+
+.nav-icon{
+  height: 20px;
+  width: 20px;
+}
+
+.woople-logo{
+  height: 26px;
+}
+
  }
 
- @media only screen and (max-width: 800px){
+ @media only screen and (max-width: 500px) {
+  .hamb-menu{
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    min-height: 25px;
+    min-width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .link-container{
+    display: none;
+    flex-direction: column;
+  }
+
+  .link-container.active{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-container{
+    display: none;
+  }
+
+  .icon-container.active{
+    display: flex;
+  }
+
+  .nav-icon.active{
+    display: flex;
+  }
+
   .nav-container{
-    width: 80%;
-    font-size: 1.5rem;
+    width: 100%;
+    flex-direction: column;
   }
-
-  .nav-icon{
-    height: 20px;
-    width: 20px;
-  }
-
-  .woople-logo{
-    height: 26px;
-  }
- }
-
- /* Testing */
- li{
-  display: inline;
- }
-
- ul{
-  display: flex;
-  justify-content: space-between;
  }
