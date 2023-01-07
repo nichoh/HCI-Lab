@@ -3,7 +3,7 @@ html{
 }
 
 @font-face {
-  font-family: niagara;
+  font-family: 'niagara solid';
   src: url(Fonts/NIAGSOL.TTF);
   font-size: 100%;
 }
@@ -25,7 +25,7 @@ html{
     padding-top: 5px;
     width: 70%;
     font-size: 3rem;
-    font-family: niagara;
+    font-family: 'niagara solid';
 }
 
 .link-container{
@@ -80,7 +80,7 @@ a{
   justify-content: space-evenly;
   min-height: 900px;
   margin: 10px 0px;
-  font-family: niagara;
+  font-family: 'niagara solid';
   font-style: normal;
 }
 
