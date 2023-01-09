@@ -255,20 +255,45 @@ a{
 }
 
 .cart-box{
+  display: none;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.cart-box.active{
   display: flex;
   flex-direction: row;
 }
-
+.cart-remove{
+  justify-content: center;
+}
 .cart-image{
-  height: 250px;
+  height: 200px;
 }
 
 .cart-detail-box{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  row-gap: 0.5rem;
 }
 
+.cart-detail-name{
+  font-size: 1rem;
+}
+
+.cart-detail-price{
+  font-size: 2rem;
+}
+
+.total-price-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-title{
+  font-size: 5rem;
+}
  /* Responsive */
  @media only screen and (max-width: 800px){
   .content-container{
