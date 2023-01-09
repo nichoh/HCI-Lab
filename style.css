@@ -171,7 +171,9 @@ a{
   background-color: #5a5a5a;
   color: white;
   padding-left: 20px;
-  font-size: 1.3rem;
+  font-size: 0.7rem;
+  position: relative;
+  bottom: 0;
  }
 
  /* Mac Page */
@@ -224,7 +226,8 @@ a{
 
  .Detail{
   text-align: center;
-  min-height: 9%;
+  min-height: 7%;
+  font-size: 1.4rem;
  }
 
  /* Responsive */
@@ -310,3 +313,22 @@ a{
     flex-direction: column;
   }
  }
+
+ /* iPhone.html */
+ #iphonepic{
+    width: 300px;
+    margin-top: 65px;
+    margin-bottom: 27.68px;
+ }
+
+ #iphonepicsmall{
+  width: 275px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+#iphonename{
+  text-align: center;
+  font-family: 'niagara solid';
+  font-size: xx-large;
+}
