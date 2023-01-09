@@ -166,6 +166,15 @@ a{
  #mac-info{
   height: 30%;
  }
+ 
+ #learnmore{
+  font-size: x-large;
+ }
+
+ #learnmoreiphone{
+  font-size: x-large;
+  color: #070707;
+ }
 
  footer{
   background-color: #5a5a5a;
