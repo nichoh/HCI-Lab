@@ -256,6 +256,7 @@ a{
 /* Checkout Page */
 .checkout-container{
   display: flex;
+  justify-content: space-evenly;
 }
 
 .Cart-container{
@@ -268,14 +269,15 @@ a{
 
 .cart-box{
   display: none;
-  /* display: flex;
-  flex-direction: row; */
-}
-
-.cart-box.active{
   display: flex;
   flex-direction: row;
 }
+
+/* .cart-box.active{
+  display: flex;
+  flex-direction: row;
+} */
+
 .cart-remove{
   justify-content: center;
 }
