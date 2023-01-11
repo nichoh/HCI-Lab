@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Store</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </head>
 <body>
     <header>
@@ -145,7 +145,7 @@
                     <div class="input-box">
                         <div class="user-name">
                             <label for="">Full Name</label>
-                            <input type="text" placeholder="enter your name" required name="" id="">
+                            <input type="text" placeholder="enter your name" required name="" id="name-input">
                         </div>
                     </div>
                     <div class="input-box">
@@ -158,19 +158,21 @@
                     <div class="input-box">
                         <div class="user-phone">
                             <label for="">Phone number</label>
-                            <input type="text" placeholder="must be number" required name="" id="">
+                            <input type="text" placeholder="must be number" required name="" id="phone-input" onkeyup="OnlyNumber(document.getElementById('phone-input').value)">
+                            <span id="phone-error"></span>
                         </div>
                     </div>
                     <div class="input-box">
                         <div class="user-address">
                             <label for="">Address</label>
-                            <input type="text" placeholder="enter your address" required name="" id="">
+                            <input type="text" placeholder="enter your address" required name="" id="address-input">
+                            <span id="phone-error"></span>
                         </div>
                     </div>
                     <div class="input-box">
                         <div class="user-creditcard">
-                            <label for="">Credut Card</label>
-                            <input type="text" placeholder="enter your credit card number" required name="" id="">
+                            <label for="">Credit Card</label>
+                            <input type="text" placeholder="enter your credit card number" required name="" id="card-input">
                         </div>
                     </div>
                     <button type="submit">Submit</button>
@@ -184,5 +186,5 @@
     </footer>
 
 </body>
-<!-- <script src="script.js"></script> -->
+<script src="script.js"></script>
 </html>

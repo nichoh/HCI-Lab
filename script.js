@@ -106,11 +106,9 @@ function checkEmail(userEmail){
     
     if(at<1){
         return false;
-    }
-    if(dot=userEmail.length - 1){
+    }else if(dot=userEmail.length - 1){
         return false;
     }
-    
 
 }
 
@@ -119,6 +117,24 @@ function ValidateEmail(userEmail){
 
     if(!result){
         document.getElementById("email-error").innerHTML="Email Address is not Valid"
+    }else{
+        document.getElementById("email-error").innerHTML="Correct"
     }
+
+    // if(result){
+    //     document.getElementById
+    //     document.getElementById("email-error").innerHTML=""
+    // }
+}
+
+function OnlyNumber(userNumber){
+    var numLen=userNumber.length
+    
+    // for(var i=0; i<numLen; i++){
+    //     if(userNumber[i] != [0-9]){
+    //         document.getElementById("phone-error").innerHTML="Phone Number is not Valid"
+    //     }
+    // }
+    
 }
 
