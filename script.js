@@ -91,3 +91,34 @@ function updateTotal(){
         document.getElementsByClassName("total-price")[0].innerText= "$" + total;
     }
 }
+
+
+// const form=document.querySelector('form')
+// const userName=document.getElementsByClassName('user-name');
+// var userEmail=document.getElementsByClassName('user-email')[0];
+// const phone=document.getElementsByClassName('user-phone');
+// const userAddress=document.getElementsByClassName('user-address');
+// const userCard=document.getElementsByClassName('user-creditcard');
+
+function checkEmail(userEmail){
+    var at= userEmail.indexOf("@");
+    var dot= userEmail.indexOf(".");
+    
+    if(at<1){
+        return false;
+    }
+    if(dot=userEmail.length - 1){
+        return false;
+    }
+    
+
+}
+
+function ValidateEmail(userEmail){
+    var result=checkEmail(userEmail);
+
+    if(!result){
+        document.getElementById("email-error").innerHTML="Email Address is not Valid"
+    }
+}
+
