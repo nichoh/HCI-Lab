@@ -246,7 +246,7 @@ a{
   text-align: center;
   min-height: 7%;
   font-size: 1.4rem;
-  
+
  }
 
  .btn-AddToCart{
@@ -382,13 +382,13 @@ a{
 
  /* Responsive */
  @media only screen and (max-width: 800px){
-  .content-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 300px;
-    margin: 10px 0px;
+.content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 300px;
+  margin: 10px 0px;
  }
 
  #iphone-display{
@@ -422,7 +422,35 @@ a{
   height: 26px;
 }
 
+/* CHECKOUT PAGE */
+
+.checkout-container{
+  min-width: 60%;
+  /* display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  align-items: center; */
 }
+
+.cart-divider{
+  display: flex;
+  flex-direction: column;
+}
+
+.Personal-info-container{
+  min-width: 40%;
+}
+
+.cart-image{
+  max-width: 200px;
+}
+
+#iphone-cart-image{
+  max-width: 100px;
+}
+}
+
+
  @media only screen and (max-width: 500px) {
   .hamb-menu{
     position: absolute;
