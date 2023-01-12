@@ -184,7 +184,6 @@ a{
   font-size: 0.7rem;
   position: relative;
   bottom: 0;
-  margin-top: 10px;
  }
 
  /* Mac Page */
@@ -517,28 +516,44 @@ a{
 
 #BackBox{
   background-color: rgb(122, 122, 122) ;
-  height: 800px;
+  height: 2200px;
 }
 
 .label{
   height: 100px;
   margin-left: 200px;
   margin-top: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .Slides{
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 320px;
 }
 
-#goleft{
+.arrows{
   width: 60px;
   margin-left: 60px;
+  margin-right: 60px;
 }
 
-#goright{
-  width: 60px;
-  margin-left: 60px;
+.Sliding{
+  display: inline-flex;
+}
+
+.PosterS{
+  width:  800px;
+}
+
+.labelbreak{
+  margin-top: 40px;
+}
+
+.PosterMo{
+  width: 800px;
+}
+.PosterMu{
+  width: 400px;
 }

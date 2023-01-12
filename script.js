@@ -138,3 +138,99 @@ function OnlyNumber(userNumber){
     
 }
 
+// Services.html slider
+//Show
+var slidesS = $('.PosterS') 
+slidesS.hide()
+
+var minS = 0
+var maxS = slidesS.length - 1
+
+var indexS = 0
+slidesS.eq(indexS).show()
+
+$('#gorightS').click(()=> {
+    if(indexS == maxS){
+        return
+    }
+
+    slidesS.eq(indexS).fadeOut(500, ()=> {
+        indexS++
+        slidesS.eq(indexS).fadeIn(500)
+    })
+})
+
+$('#goleftS').click(()=> {
+    if(indexS == minS){
+        return
+    }
+
+    slidesS.eq(indexS).fadeOut(500, ()=> {
+        indexS--
+        slidesS.eq(indexS).fadeIn(500)
+    })
+})
+
+//Movie
+var slidesMo = $('.PosterMo') 
+slidesMo.hide()
+
+var minMo = 0
+var maxMo = slidesMo.length - 1
+
+var indexMo = 0
+slidesMo.eq(indexMo).show()
+
+$('#gorightMo').click(()=> {
+    if(indexMo == maxMo){
+        return
+    }
+
+    slidesMo.eq(indexMo).fadeOut(500, ()=> {
+        indexMo++
+        slidesMo.eq(indexMo).fadeIn(500)
+    })
+})
+
+$('#goleftMo').click(()=> {
+    if(indexMo == minMo){
+        return
+    }
+
+    slidesMo.eq(indexMo).fadeOut(500, ()=> {
+        indexMo--
+        slidesMo.eq(indexMo).fadeIn(500)
+    })
+})
+
+//music
+var slidesMu = $('.PosterMu') 
+slidesMu.hide()
+
+var minMu = 0
+var maxMu = slidesMu.length - 1
+
+var indexMu = 0
+slidesMu.eq(indexMu).show()
+
+$('#gorightMu').click(()=> {
+    if(indexMu == maxMu){
+        return
+    }
+
+    slidesMu.eq(indexMu).fadeOut(500, ()=> {
+        indexMu++
+        slidesMu.eq(indexMu).fadeIn(500)
+    })
+})
+
+$('#goleftMu').click(()=> {
+    if(indexMu == minMu){
+        return
+    }
+
+    slidesMu.eq(indexMu).fadeOut(500, ()=> {
+        indexMu--
+        slidesMu.eq(indexMu).fadeIn(500)
+    })
+})
