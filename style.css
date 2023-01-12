@@ -231,6 +231,8 @@ a{
    justify-content: center;
    min-width: 30%;
    min-height: 1000px;
+   text-align: center;
+   row-gap: 5px;
  }
 
  .comp-content.a{
@@ -244,6 +246,7 @@ a{
   text-align: center;
   min-height: 7%;
   font-size: 1.4rem;
+  
  }
 
  .btn-AddToCart{
@@ -252,6 +255,12 @@ a{
   border-radius: 12px;
   font-size: 2rem;
  }
+
+ .mac-name{
+  font-size: 3rem;
+  font-weight: 550;
+ }
+
 
   /* iPhone.html */
  #iphonepic{
