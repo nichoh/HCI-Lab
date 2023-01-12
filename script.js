@@ -89,11 +89,13 @@ function updateTotal(){
         total = total+ (price*quantity);
 
         document.getElementsByClassName("total-price")[0].innerText= "$" + total;
+        checkCart(total);
     }
+
 }
 
 
-// const form=document.querySelector('form')
+const form=document.querySelector('form')
 // const userName=document.getElementsByClassName('user-name');
 // var userEmail=document.getElementsByClassName('user-email')[0];
 // const phone=document.getElementsByClassName('user-phone');
@@ -116,27 +118,49 @@ function ValidateEmail(userEmail){
     var result=checkEmail(userEmail);
 
     if(!result){
+        preventDefaut();
         document.getElementById("email-error").innerHTML="Email Address is not Valid"
     }else{
         document.getElementById("email-error").innerHTML="Correct"
     }
-
-    // if(result){
-    //     document.getElementById
-    //     document.getElementById("email-error").innerHTML=""
-    // }
 }
 
-function OnlyNumber(userNumber){
-    var numLen=userNumber.length
-    
-    // for(var i=0; i<numLen; i++){
-    //     if(userNumber[i] != [0-9]){
-    //         document.getElementById("phone-error").innerHTML="Phone Number is not Valid"
-    //     }
-    // }
-    
+function checkNumber(userNumber){
+    if(isNaN(userNumber)){
+        document.getElementById("phone-error").innerHTML="Input only number"
+        document.getElementById("form-sub-button").disabled=true;
+    }else{
+        document.getElementById("phone-error").innerHTML="Correct"
+        document.getElementById("form-sub-button").disabled=false;
+    }
 }
+
+
+function checkCard(userCreditCard){
+    var cardnumlen=userCreditCard.length;
+    if(isNaN(userCreditCard) || cardnumlen!=16){
+        document.getElementById("card-error").innerHTML="Invalid Credit Card Number"
+        document.getElementById("form-sub-button").disabled=true;
+    }
+    
+    if(!isNaN(userCreditCard) && cardnumlen==16){
+        document.getElementById("card-error").innerHTML="Correct"
+        document.getElementById("form-sub-button").disabled=false;
+    }
+}
+
+// function checkCart(total){
+//     var priceTotal=total;
+
+//     if(total==0){
+//         document.getElementById("submit-error").innerHTML="Cart Cannot be Empty"
+//         document.getElementById("form-sub-button").disabled=true;
+//     }else if(total!=0){
+//         document.getElementById("submit-error").innerHTML="Cart is not Empty"
+//         document.getElementById("form-sub-button").disabled=false;
+//     }
+    
+// }
 
 // Services.html slider
 //Show

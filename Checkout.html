@@ -153,7 +153,7 @@
                     </div>
                     <div class="input-box">
                             <label for="">Phone number</label>
-                            <input type="text" placeholder="must be number" required name="" id="phone-input" onkeyup="OnlyNumber(document.getElementById('phone-input').value)">
+                            <input type="text" placeholder="must be number" required name="" id="phone-input" onkeyup="checkNumber(document.getElementById('phone-input').value)">
                             <span id="phone-error"></span>
                     </div>
                     <div class="input-box">
@@ -163,9 +163,11 @@
                     </div>
                     <div class="input-box">
                             <label for="">Credit Card</label>
-                            <input type="text" placeholder="enter your credit card number" required name="" id="card-input">
+                            <input type="text" placeholder="enter your credit card number(16 digits)" required name="" id="card-input" onkeyup="checkCard(document.getElementById('card-input').value)">
+                            <span id="card-error"></span>
                     </div>
-                    <button type="submit">Submit</button>
+                    <span id="submit-error"></span>
+                    <button type="submit" id="form-sub-button">Submit</button>
                 </form>   
             </div>
         </div>
