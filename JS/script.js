@@ -110,19 +110,23 @@ function checkEmail(userEmail){
         return false;
     }else if(dot=userEmail.length - 1){
         return false;
+    }else{
+        return true;
     }
-
 }
 
 function ValidateEmail(userEmail){
-    var result=checkEmail(userEmail);
+    var result=true;
+    result=checkEmail(userEmail);
 
     if(!result){
-        preventDefaut();
         document.getElementById("email-error").innerHTML="Email Address is not Valid"
+        document.getElementById("form-sub-button").disabled=true;
     }else{
         document.getElementById("email-error").innerHTML="Correct"
+         document.getElementById("form-sub-button").disabled=false;
     }
+
 }
 
 function checkNumber(userNumber){

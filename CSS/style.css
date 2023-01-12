@@ -262,6 +262,10 @@ a{
   font-weight: 550;
  }
 
+ .mac-pic{
+  max-height: 300px;
+ }
+
 
   /* iPhone.html */
  #iphonepic{
@@ -563,6 +567,16 @@ a{
   .nav-container{
     width: 100%;
     flex-direction: column;
+  }
+
+  /* MAC PAGE */
+  .type-content--active{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mac-pic{
+    max-height: 40px;
   }
 
   /* CHECKOUT PAGE */
