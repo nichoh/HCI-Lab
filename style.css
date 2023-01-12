@@ -252,7 +252,29 @@ a{
   border-radius: 12px;
   font-size: 2rem;
  }
- 
+
+  /* iPhone.html */
+ #iphonepic{
+    /* width: 300px; */
+    max-width: 300px;
+    margin-top: 65px;
+    margin-bottom: 27.68px;
+    /* height: max-content; */
+ }
+
+ #iphonepicsmall{
+  /* width: 275px; */
+  max-width: 270px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+#iphonename{
+  text-align: center;
+  font-family: 'niagara solid';
+  font-size: xx-large;
+}
+
 /* Checkout Page */
 .checkout-content-container{
   display: flex;
@@ -268,10 +290,15 @@ a{
   align-items: center;
 }
 
+.checkout-content-container{
+  font-size: 2rem;
+}
+
 .cart-divider{
   display: flex;
   justify-content: center;
   min-width: 50%;
+  column-gap: 20px;
 }
 
 .cart-box{
@@ -301,6 +328,10 @@ a{
   flex-wrap: nowrap;
 }
 
+.cart-image-container{
+  max-height: 200px;
+}
+
 .cart-image{
   max-height: 200px;
 }
@@ -320,6 +351,25 @@ a{
   display: flex;
   flex-direction: column;
 }
+
+.input-box label{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.total-price-container{
+  text-align: center;
+}
+
+.total-title{
+  font-size: 5rem;
+}
+
+.total-price{
+  font-weight: bold;
+  font-size: 3rem;
+}
+
 
  /* Responsive */
  @media only screen and (max-width: 800px){
@@ -404,21 +454,3 @@ a{
   }
  }
 
- /* iPhone.html */
- #iphonepic{
-    width: 300px;
-    margin-top: 65px;
-    margin-bottom: 27.68px;
- }
-
- #iphonepicsmall{
-  width: 275px;
-  margin-top: 100px;
-  margin-bottom: 25px;
-}
-
-#iphonename{
-  text-align: center;
-  font-family: 'niagara solid';
-  font-size: xx-large;
-}
